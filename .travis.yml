@@ -4,3 +4,4 @@ deploy:
   script: bash docker_push.sh
   on:
     all_branches: true
+edge: true
