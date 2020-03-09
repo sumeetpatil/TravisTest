@@ -1,1 +1,1 @@
-Test for travis docker -- Vulas is awesome  :)
+travis docker -- Vulas is awesome  :)
