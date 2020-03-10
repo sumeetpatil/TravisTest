@@ -4,8 +4,8 @@ deploy:
   skip_cleanup: true
   script: bash docker_push.sh
   on:
-    condition: tag =^[0-9]+\.[0-9]+\.[0-9]+(\..+)?$
-    tags: true
+  all_branches: true
+  condition: $TRAVIS_TAG =~ ^v[0-9]+\.[0-9]+\.[0-9]+
 env:
   global:
   - secure: HBMQIRv4VlSUKgr7+Q25r2xnsYpW0Cyaryy6Fcl2InI5PUpZ1CeSEEFYS2DBo1tLGlson7nw/VmmR22aS0tps+kgoGtFnT8Ybp0Pl7qiqHdfrxTowGpPpOdeudBtzCyip1vlSEHfMM+OqA+851IYgCmobKazPRQtBeIGUxQv+iRv/d7UHSYGqVOa0jMpeJKIB7BDL5BVXjVTpCfmcaanxJsA6+z62B0PV7bY/4EY9RwcBLFifWoLxF4F4DEUqThJZ+LDjCScq/UOMYB5GjFCIV7BI1aAwTxo3uoQxHPErfCM3vPCSlrnINnKUfswK2p0clzDBfvIBFKN2qZFf7HksAgsFrPEwKoscg7iZ4q1tpCUf9NH350qi3ka3mPx6dA00XzbMm8HiO5UH8S/KNP67JNSn+9cKdFZSDOUgs0yBcjDO/5KIyF+j+9oJCPbgg2jc6Tgy7uXP8y2shP6O5JtSbJLSDEDagAg8rD5PATGYni3yGayV5u2GREJ3Q4LUNN0mnOaw/OTXLzhZK63Y2/YQ3I3OorAm+TbHNfaCR49abnsizU5OV7deNoGjpAlW6OfKJavRZobsQjzQk3RihTQrWzT8Xn/IWDHSCs5s/EZxqCLUoqUnexp4BuyWtZ+J8jqY7ddeeMMXmqoYE/GTZjrFV6xStNJEjVRQ71AjyExEVE=
