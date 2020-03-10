@@ -4,6 +4,7 @@ deploy:
   skip_cleanup: true
   script: bash docker_push.sh
   on:
+    condition: tag =^[0-9]+\.[0-9]+\.[0-9]+(\..+)?$
     tags: true
 env:
   global:
