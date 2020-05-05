@@ -2,7 +2,14 @@ language: bash
 deploy:
   provider: script
   skip_cleanup: true
-  script: bash docker_push.sh
+  script: echo "push branch"
+  on:
+     branch: master
+     condition: $TRAVIS_EVENT_TYPE = push
+
+  provider: script
+  skip_cleanup: true
+  script: echo "push tags"
   on:
     tags: true
     condition: $TRAVIS_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+(\..+)?$
