@@ -20,7 +20,7 @@ def handle_mkdocs_ghdeploy():
         remote_name='https://github.com/sumeetpatil/TravisTest.git'
     )
     build.build(cfg)
-    print('Deploying {} Github Pages to {}#gh-pages'.format(kind, remote))
+    print('Deploying {} Github Pages to {}#gh-pages')
     gh_deploy.gh_deploy(cfg, force=True)
 
 
