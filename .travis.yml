@@ -5,6 +5,7 @@ matrix:
     script: echo "push branch"
 
   - name: Test2
+    skip_cleanup: true
     language: pytho
     before_install: 
     - eval "$(ssh-agent -s)"
