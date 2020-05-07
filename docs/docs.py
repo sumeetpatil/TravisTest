@@ -13,16 +13,16 @@ def delete_branch(branch):
         pass
 
 
-def handle_mkdocs_ghdeploy(kind, remote):
+def handle_mkdocs_ghdeploy():
     delete_branch('gh-pages')
     cfg = config.load_config(
         config_file=os.path.join(CWD, "docs/mkdocs.yml"),
-        remote_name=remote
+        remote_name='https://github.com/sumeetpatil/TravisTest.git'
     )
     build.build(cfg)
     print('Deploying {} Github Pages to {}#gh-pages'.format(kind, remote))
     gh_deploy.gh_deploy(cfg, force=True)
 
 
-handle_mkdocs_ghdeploy('public', 'origin')
+handle_mkdocs_ghdeploy()
 
