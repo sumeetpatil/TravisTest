@@ -16,7 +16,7 @@ def delete_branch(branch):
 def handle_mkdocs_ghdeploy(kind, remote):
     delete_branch('gh-pages')
     cfg = config.load_config(
-        config_file=os.path.join(CWD, "mkdocs.yml"),
+        config_file=os.path.join(CWD, "/docs/mkdocs.yml"),
         remote_name=remote
     )
     build.build(cfg)
