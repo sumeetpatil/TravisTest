@@ -1,5 +1,5 @@
 matrix:
-  include:
+   jobs:
        - name: Test1
          language: bash
          deploy:
