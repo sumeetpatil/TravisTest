@@ -12,4 +12,6 @@ matrix:
     - openssl aes-256-cbc -K $encrypted_fe7d0d738e26_key -iv $encrypted_fe7d0d738e26_iv -in test.key.enc -out test.key -d
     - chmod 400 test.key
     - ssh-add test.key
+    - git remote set-url origin https://github.com/sumeetpatil/TravisTest.git
     - git push -v
+
