@@ -8,6 +8,8 @@ matrix:
     language: pytho
     before_install: 
     - openssl aes-256-cbc -K $encrypted_fe7d0d738e26_key -iv $encrypted_fe7d0d738e26_iv -in test.key.enc -out test.key -d 
+    - chmod 600 test.key
+    - ssh-add test.key
     install:
     - pip install -r ./docs/requirements.txt
     script:
