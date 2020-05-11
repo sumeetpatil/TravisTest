@@ -13,5 +13,4 @@ matrix:
     - chmod 400 test.key
     - ssh-add test.key
     - pip install -r ./docs/requirements.txt
-    script:
     - python ./docs/docs.py 
