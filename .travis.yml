@@ -16,4 +16,4 @@ matrix:
     - git clone git@github.com:sumeetpatil/TravisTest.git
     - cd TravisTest
     - git branch -f test master
-    - git push --dry-run origin test 
+    - git push origin test 
