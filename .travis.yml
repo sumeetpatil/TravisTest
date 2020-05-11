@@ -13,7 +13,4 @@ matrix:
     - chmod 400 test.key
     - ssh-add test.key
     - pip install -r ./docs/requirements.txt
-    - git clone git@github.com:sumeetpatil/TravisTest.git
-    - cd TravisTest
-    - git branch -f test master
-    - git push origin test 
+    - python ./docs/docs.py
